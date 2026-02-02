@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  @apply text-white;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(270deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 600% 600%;
+  animation: shaking-gradient 10s ease-in-out infinite;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold;
+}
+
+h1 {
+  @apply text-5xl;
+}
+
+h2 {
+  @apply text-4xl;
+}
+
+h3 {
+  @apply text-2xl;
+}
+
+section {
+  @apply py-20;
+}
+
+.container {
+  @apply max-w-6xl mx-auto px-4;
+}
+
+@layer utilities {
+  .text-glow {
+    /* I've updated this to a cyan glow for consistency */
+    text-shadow: 0 0 8px rgba(34, 211, 238, 0.5), 0 0 20px rgba(34, 211, 238, 0.3);
+  }
+}
+
+@keyframes shaking-gradient {
+    0%{background-position:0% 50%}
+    10%{background-position:15% 35%}
+    20%{background-position:30% 55%}
+    30%{background-position:45% 40%}
+    40%{background-position:60% 60%}
+    50%{background-position:75% 50%}
+    60%{background-position:90% 45%}
+    70%{background-position:75% 35%}
+    80%{background-position:60% 50%}
+    90%{background-position:45% 55%}
+    100%{background-position:0% 50%}
+}
